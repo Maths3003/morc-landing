@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solicitar demo — MORC</title>
+<meta name="description" content="Solicita acceso a la prueba gratuita de 30 días de MORC para tu clínica.">
+<link rel="icon" type="image/png" href="assets/logo-small.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="noise"></div>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__brand">
+      <img src="assets/logo.png" alt="MORC" class="nav__mark nav__mark--img">
+      <span class="nav__name">MORC</span>
+    </a>
+    <nav class="nav__links">
+      <a href="index.html#producto">Producto</a>
+      <a href="index.html#flujo">Cómo funciona</a>
+      <a href="pricing.html">Precios</a>
+      <a href="index.html#faq">Preguntas</a>
+    </nav>
+    <a href="contact.html" class="nav__cta">Solicitar demo</a>
+  </div>
+</header>
+
+<main>
+
+  <div class="page-header">
+    <p class="eyebrow eyebrow--center">Empieza tu prueba gratuita</p>
+    <h1>Cuéntanos de tu clínica</h1>
+    <p>Llena este formulario y te escribimos en menos de 24 horas con tu código de acceso para los 30 días de prueba, sin tarjeta de crédito.</p>
+  </div>
+
+  <section class="contact">
+    <form
+      id="demoForm"
+      class="contact__form"
+      action="https://formspree.io/f/FORMSPREE_ID"
+      method="POST"
+    >
+      <input type="hidden" name="_subject" value="Nueva solicitud de demo — MORC">
+
+      <label class="field">
+        <span>Nombre completo *</span>
+        <input type="text" name="Nombre" required placeholder="Ej. María Salazar">
+      </label>
+
+      <label class="field">
+        <span>Nombre de la clínica *</span>
+        <input type="text" name="Clínica" required placeholder="Ej. Clínica Estética Salazar">
+      </label>
+
+      <label class="field">
+        <span>Correo electrónico *</span>
+        <input type="email" name="Correo" required placeholder="tu@correo.com">
+      </label>
+
+      <label class="field">
+        <span>Teléfono / WhatsApp *</span>
+        <input type="tel" name="Teléfono" required placeholder="+57 300 0000000">
+      </label>
+
+      <label class="field">
+        <span>¿Cuántos doctores trabajan en tu clínica?</span>
+        <select name="Doctores">
+          <option value="1">1 doctor</option>
+          <option value="2">2 doctores</option>
+          <option value="3-5">3 a 5 doctores</option>
+          <option value="6+">Más de 5 doctores</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span>Cuéntanos un poco más (opcional)</span>
+        <textarea name="Mensaje" rows="4" placeholder="¿Qué usas hoy para agendar y llevar el historial de tus pacientes?"></textarea>
+      </label>
+
+      <!-- honeypot anti-spam -->
+      <input type="text" name="_gotcha" style="display:none">
+
+      <button type="submit" class="btn btn--primary btn--lg contact__submit">
+        Enviar y empezar prueba gratis
+      </button>
+      <p class="contact__microcopy">Te respondemos por correo o WhatsApp en menos de 24 horas.</p>
+    </form>
+
+    <div id="formSuccess" class="contact__success" hidden>
+      <div class="contact__success-icon">✓</div>
+      <h2>¡Listo, recibimos tu solicitud!</h2>
+      <p>Te escribiremos a tu correo o teléfono en menos de 24 horas con el código de acceso para tu prueba gratuita de 30 días.</p>
+      <a href="index.html" class="btn btn--ghost">Volver al inicio</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <img src="assets/logo.png" alt="MORC" class="nav__mark nav__mark--img">
+      <span class="nav__name">MORC</span>
+    </div>
+    <nav class="footer__links">
+      <a href="pricing.html">Precios</a>
+      <a href="terms.html">Términos de servicio</a>
+      <a href="privacy.html">Política de privacidad</a>
+      <a href="refund.html">Política de reembolso</a>
+      <span class="support-trigger" id="supportTrigger">
+        Soporte
+        <span class="support-popover" id="supportPopover">
+          <span class="support-popover__label">Contáctanos en</span>
+          <span class="support-popover__email">morcsupport@gmail.com</span>
+          <button class="support-popover__copy" id="supportCopyBtn" type="button">Copiar correo</button>
+        </span>
+      </span>
+    </nav>
+  </div>
+  <p class="footer__legal">© 2026 MORC · Colombia · morcsupport@gmail.com</p>
+</footer>
+
+<script>
+  const supportTrigger = document.getElementById('supportTrigger');
+  const supportPopover = document.getElementById('supportPopover');
+  const supportCopyBtn = document.getElementById('supportCopyBtn');
+
+  supportTrigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    supportPopover.classList.toggle('is-open');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!supportTrigger.contains(e.target)) {
+      supportPopover.classList.remove('is-open');
+    }
+  });
+
+  supportCopyBtn.addEventListener('click', async (e) => {
+    e.stopPropagation();
+    await navigator.clipboard.writeText('morcsupport@gmail.com');
+    supportCopyBtn.textContent = '¡Copiado!';
+    setTimeout(() => { supportCopyBtn.textContent = 'Copiar correo'; }, 1800);
+  });
+</script>
+
+<script>
+  const form = document.getElementById('demoForm');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitBtn = form.querySelector('.contact__submit');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando...';
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        form.hidden = true;
+        document.getElementById('formSuccess').hidden = false;
+        document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth' });
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (err) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Enviar y empezar prueba gratis';
+      alert('Hubo un problema al enviar el formulario. Por favor escríbenos directamente a morcsupport@gmail.com');
+    }
+  });
+</script>
+
+</body>
+</html>
