@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MORC — Software de gestión para clínicas estéticas</title>
+<meta name="description" content="MORC es el software de gestión para clínicas estéticas: pacientes, citas, pagos, consentimientos y estadísticas en un solo lugar.">
+<link rel="icon" type="image/png" href="assets/logo-small.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="noise"></div>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__brand">
+      <img src="assets/logo.png" alt="MORC" class="nav__mark nav__mark--img">
+      <span class="nav__name">MORC</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#producto">Producto</a>
+      <a href="#flujo">Cómo funciona</a>
+      <a href="pricing.html">Precios</a>
+      <a href="#faq">Preguntas</a>
+    </nav>
+    <a href="contact.html" class="nav__cta">Solicitar demo</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__inner">
+      <p class="eyebrow">Software de gestión clínica · Hecho en Colombia</p>
+      <h1 class="hero__title">
+        La historia clínica de cada paciente,<br>
+        <span class="hero__title-accent">sin una sola carpeta de papel.</span>
+      </h1>
+      <p class="hero__lead">
+        MORC reúne agenda, pacientes, consentimientos firmados, pagos y
+        estadísticas de tu clínica estética en una sola aplicación — para Android y Windows.
+      </p>
+      <div class="hero__actions">
+        <a href="contact.html" class="btn btn--primary">Solicitar una demo</a>
+        <a href="pricing.html" class="btn btn--ghost">Ver precios</a>
+      </div>
+      <p class="hero__microcopy">Te respondemos en menos de 24 horas, directamente, sin formularios eternos.</p>
+      <div class="hero__proof">
+        <div class="proof__item">
+          <span class="proof__num">30</span>
+          <span class="proof__label">días de prueba gratis</span>
+        </div>
+        <div class="proof__divider"></div>
+        <div class="proof__item">
+          <span class="proof__num">2</span>
+          <span class="proof__label">plataformas: Android y Windows</span>
+        </div>
+        <div class="proof__divider"></div>
+        <div class="proof__item">
+          <span class="proof__num">0</span>
+          <span class="proof__label">papeles perdidos</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mockup de teléfono con el home screen real de la app -->
+    <div class="hero__card" aria-hidden="true">
+      <div class="phone-mock">
+        <div class="phone-mock__notch"></div>
+        <div class="phone-mock__screen">
+
+          <div class="app-header">
+            <div>
+              <p class="app-header__greet">Buenos días</p>
+              <p class="app-header__name">Dra. Salazar</p>
+            </div>
+            <div class="app-header__avatar">DS</div>
+          </div>
+
+          <p class="app-section-label">Resumen</p>
+          <div class="app-summary">
+            <div class="app-summary__item">
+              <span class="num">3</span>
+              <span class="lbl">Hoy</span>
+            </div>
+            <div class="app-summary__item">
+              <span class="num">11</span>
+              <span class="lbl">Semana</span>
+            </div>
+            <div class="app-summary__item">
+              <span class="num">$2.4M</span>
+              <span class="lbl">Este mes</span>
+            </div>
+          </div>
+
+          <p class="app-section-label">Próximo procedimiento</p>
+          <div class="app-patient-card">
+            <div class="app-patient-card__top">
+              <div class="app-patient-card__avatar">MC</div>
+              <div class="app-patient-card__info">
+                <p class="name">María Camila R.</p>
+                <p class="sub">Hilos tensores · 3:30 p.m.</p>
+              </div>
+              <span class="app-tag">Confirmada</span>
+            </div>
+            <div class="app-alert">⚠ Alergia: penicilina</div>
+          </div>
+
+          <p class="app-section-label">Agenda de hoy</p>
+          <div class="app-mini-row">
+            <span class="dot dot--teal"></span>
+            <span class="mini-name">Laura Gómez</span>
+            <span class="mini-time">10:00</span>
+          </div>
+          <div class="app-mini-row">
+            <span class="dot dot--coral"></span>
+            <span class="mini-name">Andrés Pino</span>
+            <span class="mini-time">1:15</span>
+          </div>
+          <div class="app-mini-row">
+            <span class="dot dot--ink"></span>
+            <span class="mini-name">María Camila R.</span>
+            <span class="mini-time">3:30</span>
+          </div>
+
+          <div class="app-navbar">
+            <span class="navbar__item navbar__item--active">⌂</span>
+            <span class="navbar__item">☷</span>
+            <span class="navbar__item">▦</span>
+            <span class="navbar__item">⚙</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- chip flotante: firma digital -->
+      <div class="float-chip float-chip--top">
+        <span class="float-chip__icon">✍️</span>
+        <span>Firma digital de consentimientos</span>
+      </div>
+      <!-- chip flotante: offline -->
+      <div class="float-chip float-chip--bottom">
+        <span class="float-chip__icon">📶</span>
+        <span>Funciona sin internet</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGOS / TRUST STRIP -->
+  <section class="trust">
+    <p>Construido para clínicas que dejaron atrás el cuaderno de citas</p>
+  </section>
+
+  <!-- PRODUCTO -->
+  <section id="producto" class="features">
+    <p class="eyebrow eyebrow--center">Lo que reemplaza</p>
+    <h2 class="section-title">Una pantalla en vez de cinco herramientas sueltas</h2>
+
+    <div class="feature-grid">
+      <article class="feature">
+        <div class="feature__icon">📋</div>
+        <h3>Pacientes e historia clínica</h3>
+        <p>Alergias, enfermedades, medicamentos y cirugías anteriores, visibles en una sola tarjeta antes de cada cita.</p>
+      </article>
+      <article class="feature">
+        <div class="feature__icon">🗓️</div>
+        <h3>Agenda y calendario</h3>
+        <p>Vista por día, semana, mes o año. Cada doctor ve su propia agenda; recepción ve la clínica completa.</p>
+      </article>
+      <article class="feature">
+        <div class="feature__icon">✍️</div>
+        <h3>Consentimientos con firma digital</h3>
+        <p>El paciente firma con el dedo en pantalla. El PDF queda listo para compartir o archivar en segundos.</p>
+      </article>
+      <article class="feature">
+        <div class="feature__icon">💳</div>
+        <h3>Pagos y facturación</h3>
+        <p>Registra abonos, saldos y método de pago por paciente. Genera la factura en PDF al instante.</p>
+      </article>
+      <article class="feature">
+        <div class="feature__icon">📊</div>
+        <h3>Estadísticas reales</h3>
+        <p>Ingresos por procedimiento, ocupación mensual y reporte automático al cerrar cada mes.</p>
+      </article>
+      <article class="feature">
+        <div class="feature__icon">🔒</div>
+        <h3>Seguridad por diseño</h3>
+        <p>Bloqueo biométrico, cierre de sesión por inactividad y datos cifrados en tránsito y en reposo.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SHOWCASE: pantallas reales -->
+  <section class="showcase">
+    <p class="eyebrow eyebrow--center">Dentro de la app</p>
+    <h2 class="section-title">Así se ve trabajar sin papeles</h2>
+
+    <div class="showcase__grid">
+
+      <div class="showcase__item">
+        <div class="mini-mock mini-mock--list">
+          <div class="mini-mock__bar">Pacientes</div>
+          <div class="mini-mock__search">🔍 Buscar por nombre, doctor o documento</div>
+          <div class="mini-mock__row">
+            <span class="mini-mock__av">LG</span>
+            <span class="mini-mock__lines"><b>Laura Gómez</b><br>Botox · Dra. Salazar</span>
+            <span class="mini-mock__time">10:00</span>
+          </div>
+          <div class="mini-mock__row">
+            <span class="mini-mock__av mini-mock__av--coral">AP</span>
+            <span class="mini-mock__lines"><b>Andrés Pino</b><br>Hidratación facial</span>
+            <span class="mini-mock__time">1:15</span>
+          </div>
+          <div class="mini-mock__row">
+            <span class="mini-mock__av mini-mock__av--ink">MC</span>
+            <span class="mini-mock__lines"><b>María Camila R.</b><br>Hilos tensores</span>
+            <span class="mini-mock__time">3:30</span>
+          </div>
+        </div>
+        <h3>Encuentra cualquier paciente en segundos</h3>
+        <p>Busca por nombre, documento o doctor. Filtra por procedimiento y fecha sin salir de la lista.</p>
+      </div>
+
+      <div class="showcase__item">
+        <div class="mini-mock mini-mock--calendar">
+          <div class="mini-mock__bar">Junio 2026</div>
+          <div class="mini-mock__cal">
+            <span class="cal-day">L</span><span class="cal-day">M</span><span class="cal-day">X</span>
+            <span class="cal-day">J</span><span class="cal-day">V</span><span class="cal-day">S</span><span class="cal-day">D</span>
+            <span class="cal-cell"></span><span class="cal-cell"></span><span class="cal-cell"></span>
+            <span class="cal-cell dot-cell">4</span><span class="cal-cell">5</span><span class="cal-cell">6</span><span class="cal-cell">7</span>
+            <span class="cal-cell">8</span><span class="cal-cell dot-cell">9</span><span class="cal-cell">10</span>
+            <span class="cal-cell active-cell">11</span><span class="cal-cell dot-cell">12</span><span class="cal-cell">13</span><span class="cal-cell">14</span>
+          </div>
+          <div class="mini-mock__legend"><span class="dot dot--teal"></span> Días con citas agendadas</div>
+        </div>
+        <h3>Tu agenda, no la de toda la clínica</h3>
+        <p>Cada doctor ve únicamente sus citas. Recepción ve la agenda completa de todos los doctores.</p>
+      </div>
+
+      <div class="showcase__item">
+        <div class="mini-mock mini-mock--stats">
+          <div class="mini-mock__bar">Estadísticas</div>
+          <div class="mini-mock__bars">
+            <div class="bar-col"><span class="bar" style="height:38%"></span><span class="bar-lbl">Ene</span></div>
+            <div class="bar-col"><span class="bar" style="height:55%"></span><span class="bar-lbl">Feb</span></div>
+            <div class="bar-col"><span class="bar" style="height:46%"></span><span class="bar-lbl">Mar</span></div>
+            <div class="bar-col"><span class="bar" style="height:72%"></span><span class="bar-lbl">Abr</span></div>
+            <div class="bar-col"><span class="bar bar--active" style="height:90%"></span><span class="bar-lbl">May</span></div>
+            <div class="bar-col"><span class="bar" style="height:64%"></span><span class="bar-lbl">Jun</span></div>
+          </div>
+          <div class="mini-mock__income">
+            <div><span class="lbl">Pagado</span><span class="val ok">$8.1M</span></div>
+            <div><span class="lbl">Pendiente</span><span class="val warn">$1.2M</span></div>
+          </div>
+        </div>
+        <h3>Ingresos reales, sin hojas de cálculo</h3>
+        <p>Reporte mensual automático en PDF con ingresos por procedimiento, pagos pendientes y ocupación.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- POR QUÉ ELEGIR -->
+  <section class="why">
+    <p class="eyebrow eyebrow--center">Por qué MORC</p>
+    <h2 class="section-title">No construimos otro software genérico de citas</h2>
+
+    <div class="why__grid">
+      <article class="why__card">
+        <span class="why__num">01</span>
+        <h3>Hecho para clínicas estéticas, no adaptado de otro sector</h3>
+        <p>Alergias, fotos antes/después, consentimientos firmados y procedimientos por categoría — pensados desde el primer día para tu tipo de consulta, no agregados después.</p>
+      </article>
+
+      <article class="why__card">
+        <span class="why__num">02</span>
+        <h3>Cada rol ve solo lo que le corresponde</h3>
+        <p>Un doctor nunca ve la agenda de otro por accidente. Recepción ve toda la clínica. Tú decides quién entra y con qué permisos, sin configuraciones complicadas.</p>
+      </article>
+
+      <article class="why__card">
+        <span class="why__num">03</span>
+        <h3>Funciona aunque se vaya el internet</h3>
+        <p>Tu recepción sigue agendando y consultando pacientes sin conexión. Todo se sincroniza solo cuando la señal regresa.</p>
+      </article>
+
+      <article class="why__card">
+        <span class="why__num">04</span>
+        <h3>Precio pensado para Latinoamérica</h3>
+        <p>Muchas plataformas internacionales cobran tarifas pensadas para clínicas en Europa o EE. UU. MORC se construyó desde Colombia, para clínicas como la tuya.</p>
+      </article>
+
+      <article class="why__card">
+        <span class="why__num">05</span>
+        <h3>Soporte real, no un ticket que nadie responde</h3>
+        <p>Cuando escribes a soporte, te responde alguien que conoce la aplicación a fondo, no un chatbot ni un formulario que desaparece en el vacío.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="testimonials">
+    <p class="eyebrow eyebrow--center">Lo que esperamos escuchar</p>
+    <h2 class="section-title">Construido escuchando a clínicas reales</h2>
+    <p class="testimonials__disclaimer">MORC está en fase de lanzamiento. Estos testimonios representan el tipo de resultado que buscamos para nuestras clínicas piloto, no clientes verificados todavía.</p>
+
+    <div class="testimonials__grid">
+      <article class="testimonial">
+        <p class="testimonial__quote">"Dejamos de buscar la carpeta del paciente entre veinte carpetas iguales. Ahora todo el historial está en el celular del doctor antes de que el paciente se siente."</p>
+        <div class="testimonial__author">
+          <span class="testimonial__avatar">DM</span>
+          <div>
+            <p class="testimonial__name">Clínica piloto — Medicina estética</p>
+            <p class="testimonial__role">Administradora de clínica</p>
+          </div>
+        </div>
+      </article>
+      <article class="testimonial">
+        <p class="testimonial__quote">"El consentimiento firmado en la pantalla, frente al paciente, cambió cómo se siente la primera cita. Se ve mucho más profesional que el papel."</p>
+        <div class="testimonial__author">
+          <span class="testimonial__avatar">RS</span>
+          <div>
+            <p class="testimonial__name">Clínica piloto — Spa estético</p>
+            <p class="testimonial__role">Doctor tratante</p>
+          </div>
+        </div>
+      </article>
+      <article class="testimonial">
+        <p class="testimonial__quote">"Cada doctor ve solo su agenda. Eso solo ya nos ahorró las confusiones de citas dobles que teníamos con el cuaderno."</p>
+        <div class="testimonial__author">
+          <span class="testimonial__avatar">JC</span>
+          <div>
+            <p class="testimonial__name">Clínica piloto — Centro de estética facial</p>
+            <p class="testimonial__role">Recepción</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="roles">
+    <p class="eyebrow eyebrow--center">Pensado para tu equipo</p>
+    <h2 class="section-title">Cada persona ve exactamente lo que necesita</h2>
+    <div class="roles__grid">
+      <div class="role-card">
+        <span class="role-card__tag">Administrador</span>
+        <p>Configura procedimientos, doctores y precios. Ve toda la clínica de un vistazo.</p>
+      </div>
+      <div class="role-card">
+        <span class="role-card__tag">Recepción</span>
+        <p>Agenda citas para cualquier doctor y registra pacientes nuevos en segundos.</p>
+      </div>
+      <div class="role-card">
+        <span class="role-card__tag">Doctor</span>
+        <p>Ve únicamente su propia agenda, sus pacientes y sus estadísticas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLUJO -->
+  <section id="flujo" class="flow">
+    <p class="eyebrow eyebrow--center">Cómo empieza tu clínica</p>
+    <h2 class="section-title">Tres pasos, sin instalaciones complicadas</h2>
+
+    <div class="flow__steps">
+      <div class="flow__step">
+        <span class="flow__mark">Paso 1</span>
+        <h3>Creamos tu clínica</h3>
+        <p>Te damos un código de acceso único para tu equipo. Sin configuración técnica de tu parte.</p>
+      </div>
+      <div class="flow__step">
+        <span class="flow__mark">Paso 2</span>
+        <h3>Tu equipo se une</h3>
+        <p>Cada doctor o recepcionista instala la app, ingresa el código y elige su rol.</p>
+      </div>
+      <div class="flow__step">
+        <span class="flow__mark">Paso 3</span>
+        <h3>Empiezan a agendar</h3>
+        <p>30 días de prueba gratuita para que tu equipo se acostumbre antes de pagar nada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>¿Tu clínica todavía agenda en un cuaderno?</h2>
+    <p>Escríbenos y te damos acceso a la prueba gratuita de 30 días, sin tarjeta de crédito.</p>
+    <a href="contact.html" class="btn btn--primary btn--lg">Empezar prueba gratis</a>
+    <p class="cta__microcopy">Sin compromisos. Si no te convence, simplemente no activas ningún plan.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <p class="eyebrow eyebrow--center">Preguntas frecuentes</p>
+    <h2 class="section-title">Antes de escribirnos</h2>
+
+    <div class="faq__list">
+      <details class="faq__item">
+        <summary>¿MORC funciona sin internet?</summary>
+        <p>Sí. Los datos que ya cargaste quedan disponibles sin conexión; la app sincroniza automáticamente cuando vuelve la señal.</p>
+      </details>
+      <details class="faq__item">
+        <summary>¿Funciona en computadores con Windows?</summary>
+        <p>Sí, MORC tiene versión nativa para Android y para Windows de escritorio.</p>
+      </details>
+      <details class="faq__item">
+        <summary>¿Puedo cambiar de plan mensual a anual después?</summary>
+        <p>Sí, puedes solicitar el cambio de plan en cualquier momento escribiéndonos a soporte.</p>
+      </details>
+      <details class="faq__item">
+        <summary>¿Qué pasa con mis datos si cancelo?</summary>
+        <p>Tus datos no se eliminan automáticamente al suspender el servicio. Puedes exportar un respaldo completo en cualquier momento desde la app.</p>
+      </details>
+      <details class="faq__item">
+        <summary>¿Cómo pago la suscripción?</summary>
+        <p>Aceptamos tarjeta de crédito y débito a través de nuestra pasarela de pagos segura, en planes mensuales o anuales.</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <img src="assets/logo.png" alt="MORC" class="nav__mark nav__mark--img">
+      <span class="nav__name">MORC</span>
+    </div>
+    <nav class="footer__links">
+      <a href="pricing.html">Precios</a>
+      <a href="terms.html">Términos de servicio</a>
+      <a href="privacy.html">Política de privacidad</a>
+      <a href="refund.html">Política de reembolso</a>
+      <span class="support-trigger" id="supportTrigger">
+        Soporte
+        <span class="support-popover" id="supportPopover">
+          <span class="support-popover__label">Contáctanos en</span>
+          <span class="support-popover__email">morcsupport@gmail.com</span>
+          <button class="support-popover__copy" id="supportCopyBtn" type="button">Copiar correo</button>
+        </span>
+      </span>
+    </nav>
+  </div>
+  <p class="footer__legal">© 2026 MORC · Colombia · morcsupport@gmail.com</p>
+</footer>
+
+<script>
+  const supportTrigger = document.getElementById('supportTrigger');
+  const supportPopover = document.getElementById('supportPopover');
+  const supportCopyBtn = document.getElementById('supportCopyBtn');
+
+  supportTrigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    supportPopover.classList.toggle('is-open');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!supportTrigger.contains(e.target)) {
+      supportPopover.classList.remove('is-open');
+    }
+  });
+
+  supportCopyBtn.addEventListener('click', async (e) => {
+    e.stopPropagation();
+    await navigator.clipboard.writeText('morcsupport@gmail.com');
+    supportCopyBtn.textContent = '¡Copiado!';
+    setTimeout(() => { supportCopyBtn.textContent = 'Copiar correo'; }, 1800);
+  });
+</script>
+
+<script>
+  // Hero: anima al cargar la página, no al hacer scroll
+  document.querySelectorAll('.hero__title, .hero__lead, .hero__actions, .hero__microcopy, .hero__proof, .hero__card')
+    .forEach((el, i) => {
+      el.classList.add('reveal-hero');
+      el.style.animationDelay = `${i * 0.08}s`;
+    });
+
+  // Resto de la página: anima al entrar en el viewport, una sola vez
+  const revealSelectors = [
+    '.feature', '.showcase__item', '.why__card', '.testimonial',
+    '.role-card', '.flow__step', '.section-title', '.eyebrow--center',
+    '.price-card', '.faq__item'
+  ];
+  const revealEls = document.querySelectorAll(revealSelectors.join(','));
+
+  revealEls.forEach((el) => el.classList.add('reveal'));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, idx) => {
+      if (entry.isIntersecting) {
+        // pequeño stagger entre elementos del mismo grupo visible
+        setTimeout(() => entry.target.classList.add('is-visible'), idx * 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  revealEls.forEach((el) => observer.observe(el));
+</script>
+
+</body>
+</html>

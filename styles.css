@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Precios — MORC</title>
+<meta name="description" content="Planes mensuales y anuales de MORC para clínicas estéticas. 30 días de prueba gratuita.">
+<link rel="icon" type="image/png" href="assets/logo-small.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="noise"></div>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__brand">
+      <img src="assets/logo.png" alt="MORC" class="nav__mark nav__mark--img">
+      <span class="nav__name">MORC</span>
+    </a>
+    <nav class="nav__links">
+      <a href="index.html#producto">Producto</a>
+      <a href="index.html#flujo">Cómo funciona</a>
+      <a href="pricing.html">Precios</a>
+      <a href="index.html#faq">Preguntas</a>
+    </nav>
+    <a href="contact.html" class="nav__cta">Solicitar demo</a>
+  </div>
+</header>
+
+<main>
+
+  <div class="page-header">
+    <p class="eyebrow eyebrow--center">Precios</p>
+    <h1>Dos planes, un mismo objetivo: que dejes el papel</h1>
+    <p>Empieza con 30 días de prueba gratuita, sin tarjeta de crédito. Cambia de plan cuando tu clínica crezca, sin perder ningún dato.</p>
+  </div>
+
+  <section class="pricing">
+    <div class="pricing__grid">
+
+      <div class="price-card">
+        <p class="price-card__name">Plan mensual</p>
+        <p class="price-card__desc">Para clínicas que están empezando.</p>
+        <div class="price-card__amount">
+          <span class="num">$30</span>
+          <span class="period">USD / mes</span>
+        </div>
+        <p class="price-card__save">&nbsp;</p>
+        <ul class="price-card__features">
+          <li>Hasta 2 doctores</li>
+          <li>Hasta 100 pacientes activos</li>
+          <li>Historia clínica, alergias y medicamentos</li>
+          <li>Agenda y calendario por rol</li>
+          <li>Consentimientos con firma digital</li>
+          <li>Pagos y facturas en PDF</li>
+          <li>Estadísticas básicas</li>
+          <li>Exportar pacientes a PDF</li>
+          <li>App Android y Windows</li>
+          <li>Soporte por correo (48 h)</li>
+        </ul>
+        <a href="contact.html?plan=mensual" class="btn btn--ghost">Empezar prueba gratis</a>
+      </div>
+
+      <div class="price-card price-card--featured">
+        <span class="price-card__badge">Ahorras $60 al año</span>
+        <p class="price-card__name">Plan anual</p>
+        <p class="price-card__desc">Para clínicas que ya saben que se quedan.</p>
+        <div class="price-card__amount">
+          <span class="num">$300</span>
+          <span class="period">USD / año</span>
+        </div>
+        <p class="price-card__save">Equivale a $25 USD/mes</p>
+        <ul class="price-card__features">
+          <li><strong>Doctores ilimitados</strong></li>
+          <li><strong>Pacientes ilimitados</strong></li>
+          <li>Todo lo del plan mensual</li>
+          <li><strong>Historial de auditoría completo</strong></li>
+          <li><strong>Reporte mensual automático en PDF</strong></li>
+          <li><strong>Exportar a Excel sin límite</strong></li>
+          <li><strong>Respaldo de datos exportable</strong></li>
+          <li><strong>Recordatorios automáticos a pacientes</strong></li>
+          <li>Soporte prioritario (24 h)</li>
+        </ul>
+        <a href="contact.html?plan=anual" class="btn btn--primary">Empezar prueba gratis</a>
+      </div>
+
+    </div>
+
+    <p class="pricing__note">
+      ¿Tu clínica creció? Puedes cambiar al plan anual en cualquier momento sin perder tus datos.
+      Precios en dólares estadounidenses (USD), facturados a través de nuestra pasarela de pagos.
+      Puedes cancelar cuando quieras desde tu panel de administrador; tus datos se conservan y solo
+      se restringe el acceso hasta que se reactive la suscripción. Ver <a href="refund.html" style="color:var(--teal-light); text-decoration:underline;">política de reembolso</a>.
+    </p>
+  </section>
+
+  <section class="faq">
+    <p class="eyebrow eyebrow--center">Sobre el cobro</p>
+    <h2 class="section-title">Preguntas sobre precios</h2>
+    <div class="faq__list">
+      <details class="faq__item">
+        <summary>¿Hay costo de instalación o configuración?</summary>
+        <p>No. Nosotros creamos tu clínica y te entregamos el código de acceso para tu equipo sin costo adicional.</p>
+      </details>
+      <details class="faq__item">
+        <summary>¿Qué pasa al terminar los 30 días de prueba?</summary>
+        <p>Te contactamos antes de que termine para activar el plan que prefieras. Si no activas un plan, el acceso queda suspendido pero tus datos no se eliminan.</p>
+      </details>
+      <details class="faq__item">
+        <summary>¿Puedo cambiar entre plan mensual y anual?</summary>
+        <p>Sí, en cualquier momento. Escríbenos a soporte y hacemos el cambio para tu siguiente ciclo de facturación, sin perder ningún dato ya registrado.</p>
+      </details>
+      <details class="faq__item">
+        <summary>¿Qué pasa si supero el límite de 100 pacientes o 2 doctores del plan mensual?</summary>
+        <p>Tus datos siguen funcionando con normalidad; te avisamos para que actives el plan anual cuando estés listo para crecer sin límites.</p>
+      </details>
+      <details class="faq__item">
+        <summary>¿Por qué el historial de auditoría solo está en el plan anual?</summary>
+        <p>La auditoría completa (quién hizo qué y cuándo en cada paciente) es una capa adicional de trazabilidad pensada para clínicas con varios doctores y mayor volumen, por eso es parte del plan anual.</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <img src="assets/logo.png" alt="MORC" class="nav__mark nav__mark--img">
+      <span class="nav__name">MORC</span>
+    </div>
+    <nav class="footer__links">
+      <a href="pricing.html">Precios</a>
+      <a href="terms.html">Términos de servicio</a>
+      <a href="privacy.html">Política de privacidad</a>
+      <a href="refund.html">Política de reembolso</a>
+            <span class="support-trigger" id="supportTrigger">
+        Soporte
+        <span class="support-popover" id="supportPopover">
+          <span class="support-popover__label">Contáctanos en</span>
+          <span class="support-popover__email">morcsupport@gmail.com</span>
+          <button class="support-popover__copy" id="supportCopyBtn" type="button">Copiar correo</button>
+        </span>
+      </span>
+    </nav>
+  </div>
+  <p class="footer__legal">© 2026 MORC · Colombia · morcsupport@gmail.com</p>
+</footer>
+
+<script>
+  const supportTrigger = document.getElementById('supportTrigger');
+  const supportPopover = document.getElementById('supportPopover');
+  const supportCopyBtn = document.getElementById('supportCopyBtn');
+
+  supportTrigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    supportPopover.classList.toggle('is-open');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!supportTrigger.contains(e.target)) {
+      supportPopover.classList.remove('is-open');
+    }
+  });
+
+  supportCopyBtn.addEventListener('click', async (e) => {
+    e.stopPropagation();
+    await navigator.clipboard.writeText('morcsupport@gmail.com');
+    supportCopyBtn.textContent = '¡Copiado!';
+    setTimeout(() => { supportCopyBtn.textContent = 'Copiar correo'; }, 1800);
+  });
+</script>
+
+</body>
+</html>
